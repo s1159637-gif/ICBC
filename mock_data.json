@@ -1,0 +1,26 @@
+{
+  "kycc_profiles": {
+    "prudent_hedger": {
+      "hesitation_time": 14.2,
+      "risk_preference": "稳健避险型",
+      "greed_index": 65,
+      "fear_index": 35,
+      "tags": ["汇率避险敏感", "损失厌恶系数高", "长期定投偏好", "防诈警觉性高"],
+      "peer_benchmark": 88
+    }
+  },
+  "recommended_products": [
+    {
+      "id": 1,
+      "name": "工银亚洲·粤港澳跨境双币稳健理财",
+      "rate": "3.85%",
+      "match_percentage": "98.5%"
+    },
+    {
+      "id": 2,
+      "name": "工银理财·天添益 (青年专属版)",
+      "rate": "2.15%",
+      "match_percentage": "96.5%"
+    }
+  ]
+}

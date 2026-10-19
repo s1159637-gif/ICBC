@@ -1,0 +1,79 @@
+[
+  {
+    "timestamp": "17:37:53.276",
+    "event_name": "START_PRACTICE",
+    "details": {
+      "source": "HOME_BANNER"
+    }
+  },
+  {
+    "timestamp": "17:37:54.910",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "STOCK"
+    }
+  },
+  {
+    "timestamp": "17:37:55.862",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "AIP"
+    }
+  },
+  {
+    "timestamp": "17:37:56.657",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "SAVINGS"
+    }
+  },
+  {
+    "timestamp": "17:37:57.206",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "FX"
+    }
+  },
+  {
+    "timestamp": "17:37:58.885",
+    "event_name": "CONFIRM_ASSET_PLAN",
+    "details": {
+      "plan": "FX"
+    }
+  },
+  {
+    "timestamp": "17:43:05.086",
+    "event_name": "START_PRACTICE",
+    "details": {
+      "source": "HOME_BANNER"
+    }
+  },
+  {
+    "timestamp": "17:43:13.862",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "SAVINGS"
+    }
+  },
+  {
+    "timestamp": "17:43:14.274",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "AIP"
+    }
+  },
+  {
+    "timestamp": "17:43:14.694",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "STOCK"
+    }
+  },
+  {
+    "timestamp": "17:43:15.415",
+    "event_name": "SELECT_ASSET_PLAN",
+    "details": {
+      "plan": "FX"
+    }
+  }
+]
