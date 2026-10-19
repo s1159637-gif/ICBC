@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f3f4f8">
+<title>灣區智匯 · 沉浸式金融沙盒</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true">
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 20 20"><circle cx="8.6" cy="8.6" r="5.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 20 20"><path d="M3 7V4.6A1.6 1.6 0 014.6 3H7M13 3h2.4A1.6 1.6 0 0117 4.6V7M17 13v2.4a1.6 1.6 0 01-1.6 1.6H13M7 17H4.6A1.6 1.6 0 013 15.4V13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 20 20"><path d="M3.2 10a6.8 6.8 0 0113.6 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="3" y="9.6" width="3.4" height="5.6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="13.6" y="9.6" width="3.4" height="5.6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 15.4c0 1.6-1.7 2.4-3.6 2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9.5h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.6" cy="14.4" r="1.15" fill="currentColor"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M6 8h11l-2.6-2.6M18 16H7l2.6 2.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.6V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="14" y="4" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="14" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M14 14h2.4v2.4H14zM17.6 17.6H20V20h-2.4z" fill="currentColor"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M4 9.5L12 4l8 5.5M5.5 10v7M9.8 10v7M14.2 10v7M18.5 10v7M4 19.5h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4.5 8.5h14l-3-3M19.5 15.5h-14l3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".35"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.4 9h17.2M12 9v11M12 9c-2.6 0-4.6-1.2-4.6-2.8S8.6 3.8 10 4.6C11.3 5.4 12 9 12 9zm0 0c2.6 0 4.6-1.2 4.6-2.8S15.4 3.8 14 4.6C12.7 5.4 12 9 12 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 4h8l4 4v12H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 4v4h4M9 12h6M9 15.5h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6.2 6.4 6.2 11a6.2 6.2 0 01-12.4 0c0-4.6 6.2-11 6.2-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-med" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="13" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 10v6M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8.4" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 19.5c.8-3.2 3.3-5 6.5-5s5.7 1.8 6.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 15v-4M12.5 15V7.5M17 15v-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5l7 2.6v5.4c0 4.4-2.8 7.6-7 9-4.2-1.4-7-4.6-7-9V6.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11.8l2.1 2.1 4-4.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gold" viewBox="0 0 24 24"><path d="M8 10.5h8l2.6 8H5.4zM9.5 10.5L12 5l2.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4.5 10.5L12 4l7.5 6.5V20h-5v-5.5h-5V20h-5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9.6h17" stroke="currentColor" stroke-width="1.7"/><path d="M7 14.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="7" rx="6.4" ry="2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.6 7v5c0 1.5 2.9 2.8 6.4 2.8s6.4-1.3 6.4-2.8V7M5.6 12v5c0 1.5 2.9 2.8 6.4 2.8s6.4-1.3 6.4-2.8v-5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-life" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.6v8.8M7.6 12h8.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-me" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.8 20c1-3.7 3.7-5.7 7.2-5.7s6.2 2 7.2 5.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 40 40"><rect x="8" y="12" width="24" height="18" rx="8" fill="#dfe9ff"/><circle cx="16" cy="21" r="2.4" fill="#3b5bdb"/><circle cx="24" cy="21" r="2.4" fill="#3b5bdb"/><path d="M16.5 26.5c2.2 1.6 4.8 1.6 7 0" fill="none" stroke="#3b5bdb" stroke-width="1.8" stroke-linecap="round"/><path d="M20 12V8" stroke="#8ba6f8" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="6.8" r="2.2" fill="#ffb5c0"/><rect x="4" y="18" width="3.4" height="7" rx="1.7" fill="#c8d7ff"/><rect x="32.6" y="18" width="3.4" height="7" rx="1.7" fill="#c8d7ff"/></symbol>
+</svg>
+
+<div class="app-shell">
+  <div class="app-viewport" id="viewport">
+
+    <!-- ============ HOME ============ -->
+    <section class="screen s-home active" id="s-home">
+      <div class="home-body">
+        <div class="home-top">
+          <span class="login">登录</span>
+          <div class="search">
+            <svg class="sico"><use href="#i-search"/></svg>
+            <span>随用随取 天天盈</span>
+            <svg class="sico scan"><use href="#i-scan"/></svg>
+          </div>
+          <div class="home-actions">
+            <span class="ha"><svg><use href="#i-headset"/></svg><i class="badge">13</i></span>
+            <span class="ha plus">+</span>
+          </div>
+        </div>
+        <div class="robot-banner">
+          <div class="robot"><svg viewBox="0 0 40 40"><use href="#i-robot"/></svg></div>
+          <p>“升金有礼”达标赢“工银豆”！</p>
+          <span class="mega">
+            <svg viewBox="0 0 20 20"><path d="M3 8.2v3.6l8 3.6V4.6z" fill="currentColor" opacity=".85"/><path d="M12.6 5.4c2 .6 3.2 2 3.2 4.6s-1.2 4-3.2 4.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="home-panel">
+          <div class="hp-tabs">
+            <span class="active">常用</span>
+            <span>消息 <i class="reddot"></i></span>
+            <span>北京</span>
+            <span class="more">⋯</span>
+          </div>
+          <div class="grid-big">
+            <div class="gb-item"><span class="gb-ico a1"><svg><use href="#i-wallet"/></svg></span>账户</div>
+            <div class="gb-item"><span class="gb-ico a2"><svg><use href="#i-swap"/></svg></span>收支</div>
+            <div class="gb-item"><span class="gb-ico a3"><svg><use href="#i-clock"/></svg></span>天天盈</div>
+            <div class="gb-item"><span class="gb-ico a4"><svg><use href="#i-qr"/></svg></span>支付</div>
+          </div>
+          <div class="grid-small">
+            <div class="gs-item"><svg><use href="#i-bank"/></svg>存款</div>
+            <div class="gs-item"><svg><use href="#i-transfer"/></svg>转账汇款</div>
+            <div class="gs-item"><svg><use href="#i-gift"/></svg>热门活动</div>
+            <div class="gs-item"><svg><use href="#i-doc"/></svg>贷款</div>
+            <div class="gs-item"><svg><use href="#i-drop"/></svg>生活缴费</div>
+            <div class="gs-item"><svg><use href="#i-med"/></svg>医保</div>
+            <div class="gs-item"><svg><use href="#i-person"/></svg>薪管家</div>
+            <div class="gs-item"><svg><use href="#i-chart"/></svg>资产</div>
+            <div class="gs-item"><svg><use href="#i-shield"/></svg>个人养老金</div>
+            <div class="gs-item"><svg><use href="#i-gold"/></svg>贵金属</div>
+          </div>
+          <div class="pgdots"><i class="on"></i><i></i><i></i></div>
+        </div>
+        <div class="sandbox-banner" data-tap="start-practice">
+          <h2>湾区智汇·沉浸式金融沙盒</h2>
+          <p>大湾区青年跨境演练 ｜ 零资金风险</p>
+          <button class="banner-btn">点击开启演练 <span>→</span></button>
+        </div>
+        <div class="wealth">
+          <div class="wealth-head"><h3>工银财富</h3><span>更多 ›</span></div>
+          <div class="wealth-cards">
+            <div class="wcard w1"><h4>828财富季</h4><p>解锁多重礼遇</p><span class="wbtn">去投资</span></div>
+            <div class="wcard w2"><h4>保障护全家</h4><p>多元产品可选</p><span class="wbtn">去看看</span></div>
+          </div>
+          <div class="chips-row"><span>稳健回报</span><span>灵活取用</span><span>进取投资</span><span>保险保障</span></div>
+          <div class="fund-row"><span class="fund-name">嘉实稳福混合C</span></div>
+        </div>
+        <p class="app-disclaimer">本应用为教学模拟沙盒，不涉及真实资金交易与商业金融业务</p>
+      </div>
+      <nav class="tabbar">
+        <span class="active"><svg><use href="#i-home"/></svg>首页</span>
+        <span><svg><use href="#i-card"/></svg>信用卡</span>
+        <span><svg><use href="#i-coins"/></svg>财富</span>
+        <span><svg><use href="#i-life"/></svg>生活</span>
+        <span><svg><use href="#i-me"/></svg>我的</span>
+      </nav>
+    </section>
+
+    <!-- ============ ASSET ============ -->
+    <section class="screen s-asset" id="s-asset">
+      <header class="app-head">
+        <svg class="chev" data-back="home" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>湾区智汇·沉浸沙盒</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="asset-body">
+        <div class="asset-hero">
+          <div class="hero-top"><span>虚拟试算总资产（元）</span><span class="ghost-pill">零资金风险沙盒</span></div>
+          <div class="hero-amount">10,000.00</div>
+        </div>
+        <div class="asset-list">
+          <article class="asset-card" id="card-stock" data-plan="STOCK">
+            <div class="ac-head"><h3>股票投资</h3><span class="tag red">高风险，高收益</span></div>
+            <p>支持高保真调仓演练与启发式反思</p>
+            <div class="stock-extra">
+              <div class="quote">实时行情 <b>+2.64%</b></div>
+              <div class="slider"><span class="track"><i></i></span><span class="thumb"></span></div>
+              <div class="alloc">已配 <b>5,000</b> 元</div>
+            </div>
+          </article>
+          <article class="asset-card" id="card-fund" data-plan="AIP">
+            <div class="ac-head"><h3>基金与定投</h3><span class="tag amber">中风险，中收益</span></div>
+            <p>体验稳健配置与开启自动定投</p>
+          </article>
+          <article class="asset-card" id="card-save" data-plan="SAVINGS">
+            <div class="ac-head"><h3>定期与活期储蓄</h3><span class="tag green">低风险，低收益</span></div>
+            <p>年化利率 1.35% - 1.75% 稳健收益</p>
+          </article>
+          <article class="asset-card" id="card-fx" data-plan="FX">
+            <div class="ac-head"><h3>港币/人民币外汇锁定</h3><span class="tag blue">湾区理财通</span></div>
+            <p>当前汇率：1 HKD ≈ 0.86 CNY（对冲避险）</p>
+          </article>
+        </div>
+        <div class="mode-pill" id="modePill">沙盒演练模式，已锁定风险调仓</div>
+        <button class="cta" data-tap="confirm-assets">确认当前资产配置方案</button>
+        <div class="watermark">教学模拟沙盒专用 · 非真实交易</div>
+      </div>
+    </section>
+
+    <!-- ============ REFLECTION ============ -->
+    <section class="screen s-reflect" id="s-reflect">
+      <header class="app-head">
+        <svg class="chev" data-back="asset" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>湾区智汇·沉浸沙盒</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="reflect-bg">
+        <div class="asset-hero">
+          <div class="hero-top"><span>虚拟试算总资产（元）</span><span class="ghost-pill">零资金风险沙盒</span></div>
+          <div class="hero-amount">10,000.00</div>
+        </div>
+        <div class="asset-card selected"><div class="ac-head"><h3>股票投资</h3><span class="tag red">高风险，高收益</span></div><p>支持高保真调仓演练与启发式反思</p></div>
+        <div class="asset-card"><div class="ac-head"><h3>基金与定投</h3><span class="tag amber">中风险</span></div><p>体验稳健配置与开启自动定投</p></div>
+        <div class="watermark">教学模拟沙盒专用 · 非真实交易</div>
+      </div>
+      <div class="scrim" id="scrim"></div>
+      <div class="warn-card" id="warnCard" style="cursor: pointer;">
+        <h4>【工行客服】安全预警</h4>
+        <p>您的账户在跨境调拨中触发防诈测试，请勿向陌生链接汇款！</p>
+      </div>
+      <div class="sheet" id="reflectSheet">
+        <h3>智判定·启发式反思</h3>
+        <p class="quote">“你每改变一步配置，会对后续产生什么影响？”</p>
+        <div class="capture-box">智判定引擎捕获：你在“股票投资”卡片停顿思考了 18 秒，是什么让你犹豫呢？</div>
+        <button class="suggest-box" id="suggestFill"><span class="tick">✓</span> 拟通过外汇锁定对冲风险，兼顾高收益股票</button>
+        <div class="reflect-input">
+          <textarea id="reflectText" placeholder="请输入你的调仓总结与风险反思..." spellcheck="false"></textarea>
+        </div>
+        <button class="cta" data-tap="submit-reflection">提交反思并继续</button>
+      </div>
+      <div class="keyboard" id="keyboard">
+        <div class="kb-row"><span>q</span><span>w</span><span>e</span><span>r</span><span>t</span><span>y</span><span>u</span><span>i</span><span>o</span><span>p</span></div>
+        <div class="kb-row"><span>a</span><span>s</span><span>d</span><span>f</span><span>g</span><span>h</span><span>j</span><span>k</span><span>l</span></div>
+        <div class="kb-row"><span class="wide">⇧</span><span>z</span><span>x</span><span>c</span><span>v</span><span>b</span><span>n</span><span>m</span><span class="wide">⌫</span></div>
+        <div class="kb-row"><span class="small">123</span><span>☺</span><span class="space"></span><span class="ret">return</span></div>
+      </div>
+    </section>
+
+    <!-- ============ KYCC ============ -->
+    <section class="screen s-kycc" id="s-kycc">
+      <header class="app-head dark">
+        <svg class="chev" data-back="reflect" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>智判定·KYCC行为数据引擎</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="kycc-body">
+        <p class="kycc-sub">静默数据抓取与动态风险画像</p>
+        <div class="d-card d1">
+          <label>决策犹豫时长（外汇与调仓）</label>
+          <div class="d1-row">
+            <span class="big"><span class="ld">计算中<span class="dots"></span></span><span class="rd">14.2秒</span></span>
+            <span class="cap">已捕获犹豫时长</span>
+          </div>
+          <div class="judge"><span class="ld">系统判定：正在分析汇率锁定环节的犹豫行为…</span><span class="rd">系统判定：在港币/人民币汇率锁定时产生明显犹豫，风险偏好较低</span></div>
+        </div>
+        <div class="d-card d2">
+          <label>决策谨慎度 vs 风险承受倾向</label>
+          <div class="gauge"><span class="gauge-base"></span><span class="gauge-fill"></span><span class="gauge-thumb"></span></div>
+          <div class="weak"><span class="ld">分析中<span class="dots"></span></span><span class="rd">当前心理弱点：稳健避险型（决策谨慎度占优）</span></div>
+          <div class="ratio"><span class="ld">人性贪婪 vs 恐惧指数：计算中<span class="dots"></span></span><span class="rd">人性贪婪 vs 恐惧指数：稳健型 65% ｜ 避险 35%</span></div>
+        </div>
+        <div class="d-card d3">
+          <label>Python算法引擎生成 KYCC 投资者适当性画像</label>
+          <div class="portrait-grid">
+            <div class="p-card p-blue"><span class="ld">分析中<span class="dots"></span></span><span class="rd">汇率避险敏感</span></div>
+            <div class="p-card p-green"><span class="ld">分析中<span class="dots"></span></span><span class="rd">损失厌恶系数高</span></div>
+            <div class="p-card p-amber"><span class="ld">分析中<span class="dots"></span></span><span class="rd">长期定投偏好</span></div>
+            <div class="p-card p-red"><span class="ld">分析中<span class="dots"></span></span><span class="rd">防诈警觉性高</span></div>
+          </div>
+          <div class="ai-diag">AI 诊断：决策敏捷，具备良好大湾区外汇避险意识</div>
+        </div>
+        <div class="d-card d4">
+          <span class="ld">计算中<span class="dots"></span></span>
+          <span class="rd">恭喜！您的【稳健加定投】策略成功对冲汇率风险，<br>试算胜过 88% 大湾区同龄组！</span>
+        </div>
+        <div class="watermark dark-wm">教学模拟沙盒专用 · 非真实交易</div>
+      </div>
+      <div class="aha-layer" id="ahaLayer">
+        <div class="aha-modal">
+          <h2>发现您的顿悟时刻（Ah-ha Moment）</h2>
+          <p class="aha-lead">在真实的工行里，您的优秀策略刚好配比对上工行底层明星产品组合：</p>
+          <div class="combo">
+            <span>【工银理财·天添益】</span>
+            <i>+</i>
+            <span>【工行小额自动储蓄计划】</span>
+            <em>教学模拟沙盒专用 · 非真实交易</em>
+          </div>
+          <button class="btn-red" data-tap="aha-cta">一键将策略送到真实工行产品购买页</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MATCH ============ -->
+    <section class="screen s-match" id="s-match">
+      <header class="app-head">
+        <svg class="chev" data-back="kycc" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>湾区智汇·智能匹配成果</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="match-body">
+        <div class="match-info">
+          <p class="mi-blue">基于您的智判定沙盒演练画像</p>
+          <p class="mi-main"><span class="ld">分析中<span class="dots"></span></span><span class="rd">检测到您的避险敏感度较高，且具备长期定投倾向</span></p>
+          <p class="mi-rate"><span class="ld">契合度分析中<span class="dots"></span></span><span class="rd">契合度 98.5%</span></p>
+        </div>
+        <div class="product-list">
+          <article class="product" data-product="1">
+            <div class="prod-content">
+              <span class="prod-tag pink">工行专享·低风险</span>
+              <h3>工银亚洲·粤港澳跨境双币稳健理财</h3>
+              <div class="prod-rate"><span class="rate">3.85%</span><span class="rate-note">支持港币/人民币自动锁定</span></div>
+              <span class="rate-label">参考年化收益率</span>
+            </div>
+            <div class="prod-loading">分析中<span class="dots"></span></div>
+            <div class="watermark">教学模拟沙盒专用 · 非真实交易</div>
+          </article>
+          <article class="product" data-product="2">
+            <div class="prod-content">
+              <span class="prod-tag blue">青年定投·智能安全锁</span>
+              <h3>工银理财·天添益（青年专属版）</h3>
+              <p class="prod-desc">每月 500 元起投，内置智能异常调拨二次校验，15日自动扣款</p>
+            </div>
+            <div class="prod-loading">分析中<span class="dots"></span></div>
+            <div class="watermark">教学模拟沙盒专用 · 非真实交易</div>
+          </article>
+        </div>
+        <p class="poc">本场景为概念验证原型（PoC），产品推荐基于沙盒模拟行为生成。点击后将经由二次风险测评与合规确认跳转至工行真实手机银行入口。</p>
+        <button class="cta" data-tap="match-cta">合规确认并直通工行手机银行</button>
+      </div>
+      <div class="dialog-layer" id="dialogLayer">
+        <div class="dialog">
+          <h3>工行手机银行合规接入授权</h3>
+          <p>“湾区智汇”已将您的演练画像（脱敏）加密传输至中国工商银行手机银行 API，即将为您唤起真实业务办理入口。</p>
+          <div class="dialog-actions">
+            <button class="btn-ghost" data-tap="dialog-cancel">取消</button>
+            <button class="btn-red small" data-tap="dialog-confirm">确认唤起 ICBC App</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PURCHASE ============ -->
+    <section class="screen s-purchase" id="s-purchase">
+      <header class="app-head">
+        <svg class="chev" data-back="match" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>湾区智汇·沉浸沙盒</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="purchase-body">
+        <div class="rate-hero">
+          <div class="rate-top"><span class="big" id="pRate">3.85%</span><span class="ghost-pill light" id="pRatePill">湾区理财通专享</span></div>
+          <div class="rate-sub" id="pRateSub">参考年化收益率（港币/人民币双币对冲）</div>
+        </div>
+        <div class="form-card">
+          <label id="pAmountLabel">认购金额（港币 HKD）</label>
+          <div class="amount"><span id="pAmount">20,000.00</span> <span class="hint" id="pHint">*已由沙盒外汇策略预填</span></div>
+          <label id="pSecondLabel">锁定远期汇率</label>
+          <div class="fx-line" id="pSecondValue">1 HKD ≈ 0.8650 CNY（自动锁定）</div>
+          <label>付款账户：</label>
+          <div class="acct" id="pAcct">工银亚洲 跨境理财通多币种账户（尾号 6688）</div>
+          <div class="terms" data-tap="terms"><span class="box"></span><span class="terms-text" id="pTerms">我已确认《粤港澳跨境理财通投资者协议》及《汇率风险排查书》</span></div>
+          <div class="watermark">教学模拟沙盒专用 · 非真实交易</div>
+        </div>
+        <button class="cta" data-tap="purchase-cta">确认并提交购买</button>
+      </div>
+    </section>
+
+    <!-- ============ SUCCESS ============ -->
+    <section class="screen s-success" id="s-success">
+      <header class="app-head">
+        <svg class="chev" data-back="reset" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>交易结果</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="success-body">
+        <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.6 4.6L19 7.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>购买申请已提交</h2>
+        <p class="sub" id="sSub">预计 1 个工作日内确认份额，已生成工银亚洲跨境持仓</p>
+        <div class="detail-card">
+          <h4 id="sName">工银亚洲·粤港澳跨境双币稳健理财</h4>
+          <p id="sLine1">20,000.00 HKD（折合约 17,200 CNY）</p>
+          <p id="sLine2">已锁定远期汇率：1 HKD ≈ 0.8650 CNY</p>
+          <p id="sLine3">工银亚洲 跨境理财通账户（尾号 6688）</p>
+        </div>
+        <div class="reward-card">
+          <p class="reward-title" id="sRewardTitle">恭喜完成“湾区智汇”跨境避险演练！</p>
+          <p id="sRewardLine">获得【湾区外汇避险达人】勋章！财商积分 +500</p>
+          <p class="reward-foot" id="sRewardFoot">您已成功掌握粤港澳大湾区多币种对冲及跨境理财能力</p>
+        </div>
+      </div>
+      <div class="success-actions">
+        <button class="btn-outline" data-tap="go-home">返回工行首页</button>
+        <button class="cta" data-tap="view-holdings">查看工行真实持仓</button>
+      </div>
+    </section>
+
+    <!-- ============ HOLDINGS ============ -->
+    <section class="screen s-holdings" id="s-holdings">
+      <header class="app-head">
+        <svg class="chev" data-back="success" style="cursor: pointer;"><use href="#i-chev"/></svg>
+        <h1>我的理财持仓</h1>
+        <div class="score-pill">防诈分 : <b data-score>100</b></div>
+      </header>
+      <div class="holdings-body">
+        <div class="hold-hero">
+          <div class="hero-top"><span id="hHeroLabel">跨境理财总资产（港币折算）</span></div>
+          <div class="hero-amount" id="hAmount">20,000.00</div>
+          <div class="hero-sub" id="hSub">折合约 17,300.00 CNY ｜ 已锁定锁定汇率 0.8650</div>
+        </div>
+        <div class="hold-card">
+          <div class="hold-top">
+            <h3 id="hName">工银亚洲·粤港澳跨境双币稳健理财</h3>
+            <span class="prod-tag sandbox">湾区智汇·沙盒转化</span>
+          </div>
+          <div class="hold-amount"><span id="hHoldAmount">20,000.00</span> <small id="hUnit">HKD</small></div>
+          <div class="hold-meta" id="hMeta">参考年化 3.85% ｜ 1年期封闭90天</div>
+          <div class="hold-lock"><span id="hLock">已锁定远期保值汇率：1 HKD ≈ 0.8650 CNY</span><a data-tap="view-detail">查看详情 ›</a></div>
+        </div>
+        <button class="btn-outline bottom" data-tap="go-home">返回工行 App 首页</button>
+      </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+    <div class="flash" id="flash"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
